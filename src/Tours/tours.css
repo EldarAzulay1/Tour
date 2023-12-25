@@ -1,0 +1,132 @@
+body {
+  background: gainsboro;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  line-height: 1;
+  padding: 1%;
+}
+
+main {
+  width: 90vw;
+  max-width: 1120px;
+  margin: auto;
+}
+
+
+.title {
+  text-align: center;
+  margin-top: 1%;
+  font-size: xx-large
+}
+
+.title-underline {
+  background: green;
+  width: 30rem;
+  height: 0.25rem;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+
+
+.tours {
+  
+  padding: 2rem 0;
+  display: grid;
+  gap: 2rem;
+}
+
+
+.single-tour {
+  background: white;
+  border-radius: 0.25rem;
+  transition: 0.3s ease-in-out all;
+  /* for tour price */
+  position: relative;
+}
+
+
+.single-tour .img {
+  width:22rem;
+  height: 15rem;
+  border-top-right-radius: 0.25rem;
+  border-top-left-radius: 0.25rem;
+}
+
+.tour-price {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.5rem;
+  color: white;
+  letter-spacing: 2px;
+  background: green;
+  border-top-right-radius: 0.25rem;
+}
+
+
+.tour-info {
+
+  padding: 2rem 1.5rem;
+}
+
+.tour-info h5 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.tour-info p {
+  line-height: 1.5;
+  color: gray;
+  margin-bottom: 1.25rem;
+}
+
+.info-btn {
+  color: rgb(26, 216, 57);
+  font-weight: 600;
+}
+
+
+.delete-btn {
+  background-color: white;
+  color: black;
+  border: 1px solid rgb(26, 216, 57);
+  padding: 2%;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.delete-btn:hover {
+  background: green;
+  color: white;
+}
+
+.btn-refresh {
+  width: 10%;
+  background-color: rgb(26, 216, 57);
+  color: white;
+  border: 2px solid rgb(26, 216, 57);
+  border-radius: 4%;
+  padding: 2px;
+
+}
+
+
+
+@media screen and (min-width: 768px) {
+  .tours {
+    grid-template-columns: 1fr 1fr;
+    /* fix stretch */
+    align-items: start;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .tours {
+    grid-template-columns: 1fr 1fr 1fr;
+    /* fix stretch */
+    align-items: start;
+  }
+}
